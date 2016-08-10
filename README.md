@@ -1,5 +1,5 @@
 # Setup
-Clone from ??????
+Clone from https://github.com/tja4472/npm-link.git
 
 ## Setup npm-common. 
 Goto npm-common folder.
