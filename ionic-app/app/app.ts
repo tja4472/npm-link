@@ -11,14 +11,15 @@ import { FirstService, SecondService } from 'npm-common';
 export class MyApp {
   rootPage: any = HomePage;
 
-  constructor(platform: Platform) {
+  constructor(
+    platform: Platform,
+    private firstService: FirstService) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
     });
 
-    let firstService = new FirstService();
     firstService.helloWorld(); 
 
     let secondService = new SecondService();
@@ -26,4 +27,4 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp, [FirstService]);
