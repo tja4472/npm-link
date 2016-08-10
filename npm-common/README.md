@@ -6,6 +6,7 @@ Goto npm-common folder.
 ```
 npm install
 typings install
+tsc
 npm link
 ```
 ## Setup ionic-app.
