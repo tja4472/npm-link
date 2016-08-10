@@ -42,7 +42,10 @@ gulp.task('watch', ['clean'], function(done){
     function(){
       gulpWatch('app/**/*.scss', function(){ gulp.start('sass'); });
       gulpWatch('app/**/*.html', function(){ gulp.start('html'); });
-      buildBrowserify({ watch: true }).on('end', done);
+      buildBrowserify({ watch: true,
+         browserifyOptions: {
+          extensions: ['.js', '.ts']
+        } }).on('end', done);
     }
   );
 });

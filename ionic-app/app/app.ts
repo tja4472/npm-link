@@ -3,6 +3,7 @@ import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 
+import { FirstService, SecondService } from 'npm-common';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
@@ -16,6 +17,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
     });
+
+    let firstService = new FirstService();
+    firstService.helloWorld(); 
+
+    let secondService = new SecondService();
+    secondService.helloWorld();     
   }
 }
 
